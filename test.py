@@ -1,48 +1,35 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import tkinter as tk
+from tkinter import filedialog
 from tkinter import *
+import os
 
-# Définir la fonction qui sera appelée lorsque l'utilisateur fera un choix
-def choix_utilisateur():
-    global choix
-    choix = var.get()
-    fenetre.destroy()
 
-# Créer la fenêtre et les widgets
-fenetre = Tk()
-var = StringVar()
+def analyse(nom_fichier):
+    a = np.loadtxt(nom_fichier, dtype=str, unpack=True)
+    a = np.char.replace(a, ',', '.').astype(float)
+    k = len(a)
 
-# Obtenir la largeur et la hauteur de l'écran
-largeur_ecran = fenetre.winfo_screenwidth()
-hauteur_ecran = fenetre.winfo_screenheight()
+    b = np.zeros(k)
 
-# Calculer les coordonnées x et y pour centrer la fenêtre
-x = (largeur_ecran - 300) // 2
-y = (hauteur_ecran - 150) // 2
+    for i in range(1, k):
+        b[i] = i * 0.001
 
-# Définir les coordonnées de la fenêtre
-fenetre.geometry('300x150+{}+{}'.format(x, y))
+    a = a.reshape(-1, 1)
+    b = b.reshape(-1, 1)
 
-titre = Label(fenetre, text='Choisir le type de mesure')
-titre.pack()
+    df = pd.DataFrame(b)
 
-option_a = Radiobutton(fenetre, text='Dynamique', variable=var, value="a")
-option_a.pack()
+    df.columns = ['X']
 
-option_b = Radiobutton(fenetre, text='Statique', variable=var, value="b")
-option_b.pack()
+    df['Y'] = a
 
-bouton = Button(fenetre, text="Valider", command=choix_utilisateur)
-bouton.pack()
+    print(df)
 
-# Afficher la fenêtre et attendre la réponse de l'utilisateur
-fenetre.mainloop()
+    plt.plot(b[:k], a[:k], lw=0.1)
+    plt.show()
 
-# Utiliser la réponse de l'utilisateur dans une condition if
-if choix == "a":
-    # Faire quelque chose pour l'option a
-    pass
-elif choix == "b":
-    # Faire quelque chose pour l'option b
-    pass
-else:
-    # Gérer le cas où l'utilisateur n'a pas choisi une option valide
-    pass
+
+analyse('mesure statique 45,1')
