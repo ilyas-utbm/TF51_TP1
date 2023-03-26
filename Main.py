@@ -27,8 +27,8 @@ def dynamique(nom_fichier):
 
     aexcel = a.reshape(-1, 1)
 
-    plt.scatter(b[:k], a[:k], c='y', s=1, label='Données non filtrées')
-    plt.scatter(b[:k], aff[:k], c='m', s=1, label='Données filtrées')
+    plt.scatter(b[:k], a[:k], c='y', s=1, label='Données non lissées')
+    plt.scatter(b[:k], aff[:k], c='m', s=1, label='Données lissées')
     nom_fichier = os.path.basename(nom_fichier)
     plt.title('Vitesse du fluide en fonction du déplacement de la sonde pour le fichier ' + nom_fichier)
     plt.xlabel('Déplacement de la sonde en mm')
@@ -42,13 +42,13 @@ def dynamique(nom_fichier):
 
     df.columns = ['X']
 
-    df['Y_filtre'] = tresu
+    df['Y_lissé'] = tresu
 
     df['Y'] = aexcel
 
     print(df)
 
-    df.to_excel(nom_fichier + ' filtré.xlsx', index=False)
+    df.to_excel(nom_fichier + ' lissé.xlsx', index=False)
 
     # Ajouter courbe de tendance et son equation y=x
 

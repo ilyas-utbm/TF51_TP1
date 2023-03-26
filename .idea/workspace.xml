@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c487f283-a828-44fa-9051-006e086db1ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesure 70,1mm filtré.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesure 70,1mm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesure statique 40,1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesure statique 41,1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesure statique 42,1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesure statique 43,1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesure statique 44,1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesure statique 45,1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesure statique 45,1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesure statique 45,1.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TF51_TP1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TF51_TP1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c487f283-a828-44fa-9051-006e086db1ad" name="Default Changelist" comment="Ajout de la méthode statique">
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mesure 70,1mm filtré.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mesure 70,1mm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mesure statique 45,1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mesure statique 45,1.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,9 +115,19 @@
       <option name="presentableId" value="Default" />
       <updated>1679412229476</updated>
     </task>
+    <task id="LOCAL-00001" summary="Ajout de la méthode statique">
+      <created>1679797254644</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679797254644</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Ajout de la méthode statique" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la méthode statique" />
   </component>
 </project>
