@@ -46,8 +46,8 @@ def dynamique(nom_fichier):
     # plt.gcf().set_size_inches(15, 8)
     # plt.savefig(nom_fichier + '.jpg', dpi=199)
 
-    # plt.plot(etha[:k], aff[:k] / moyenne, c='y')
-    plt.plot(etha[:k], 1 / ((1 + 0.414 * (etha[:k] * etha[:k])) * (1 + 0.414 * (etha[:k] * etha[:k]))), c='m')
+    plt.plot(etha[:k], aff[:k] / moyenne, c='y')
+    plt.plot(etha[:k], 1 / (1 + 0.414 * (etha[:k] ** 2) ** 2), c='m')
 
     plt.show()
 
