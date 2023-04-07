@@ -39,7 +39,7 @@ def dynamique(nom_fichier, centre, couleur, z, p):
         bff[i] = 0.059 * bf[i] + (1 - 0.059) * bff[i - 1]
         eta[i] = (bff[i] - centre) / (0.1 * z)
 
-        if round(b[i], 1) == 189.5:
+        if round(b[i], 1) == centre:
             wm.append(aff[i])
 
     moyenne = sum(wm) / len(wm)
@@ -93,21 +93,20 @@ z = [30.1, 40.1, 50.1, 60.1, 70.1]
 
 couleur = ['b', 'g', 'r', 'c', 'y']
 
-centre = 189.5
+centre = 189
 
 i = len(nom_fichier)
 
 for k in range(0, i):
     dynamique(nom_fichier[k], centre, couleur[k], z[k], k)
 
-
 ax = plt.gca()
 ax.spines['right'].set_color('none')
 ax.spines['top'].set_color('none')
 ax.xaxis.set_ticks_position('bottom')
-ax.spines['bottom'].set_position(('data',0))
+ax.spines['bottom'].set_position(('data', 0))
 ax.yaxis.set_ticks_position('left')
-ax.spines['left'].set_position(('data',0))
+ax.spines['left'].set_position(('data', 0))
 
 plt.title("Profil des vitesses et prévision théorique en fonction de $\eta$ pour le fichier")
 plt.xlabel(r'$\eta$')
